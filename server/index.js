@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const path = require("path");
-
+const cors = require("cors");
 const server = require("http").createServer(app);
 const io = require("socket.io")(server);
 const config = require("./config/key");
@@ -17,6 +17,7 @@ const connect = mongoose
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
+app.use(cors());
 
 const { Chat } = require("./models/Chat");
 const { auth } = require("./middleware/auth");
