@@ -18,7 +18,7 @@ function ChatCard(props) {
             ) === "mp4" ? (
               <video
                 style={{ maxWidth: "200px" }}
-                src={`https://mernchatapp2.herokuapp.com/${props.message}`}
+                src={`${process.env.REACT_APP_URL}${props.message}`}
                 alt="video"
                 type="video/mp4"
                 controls
@@ -26,7 +26,7 @@ function ChatCard(props) {
             ) : (
               <img
                 style={{ maxWidth: "200px" }}
-                src={`https://mernchatapp2.herokuapp.com/${props.message}`}
+                src={`${process.env.REACT_APP_URL}${props.message}`}
                 alt="img"
               />
             )
