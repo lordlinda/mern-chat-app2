@@ -7,12 +7,10 @@ import { getChats, afterPostMessage } from "../../../_actions/chat_actions";
 import ChatCard from "./Sections/ChatCard";
 import Dropzone from "react-dropzone";
 import Axios from "axios";
-
 class ChatPage extends Component {
   state = {
     chatMessage: "",
   };
-
   componentDidMount() {
     let server = `https://mernchatapp2.herokuapp.com/`;
 
@@ -77,7 +75,6 @@ class ChatPage extends Component {
       }
     });
   };
-
   submitChatMessage = (e) => {
     e.preventDefault();
 

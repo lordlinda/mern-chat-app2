@@ -3,7 +3,6 @@ import moment from "moment";
 import { Comment, Tooltip, Avatar } from "antd";
 
 function ChatCard(props) {
-  console.log(process.env.REACT_APP_URL);
   return (
     <div style={{ width: "100%" }}>
       <Comment
