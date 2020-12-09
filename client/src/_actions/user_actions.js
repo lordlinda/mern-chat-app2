@@ -4,10 +4,7 @@ import { USER_SERVER } from "../components/Config.js";
 
 export function registerUser(dataToSubmit) {
   const request = axios
-    .post(
-      `https://mernchatapp2.herokuapp.com${USER_SERVER}/register`,
-      dataToSubmit
-    )
+    .post(`${USER_SERVER}/register`, dataToSubmit)
     .then((response) => response.data);
 
   return {
@@ -18,10 +15,7 @@ export function registerUser(dataToSubmit) {
 
 export function loginUser(dataToSubmit) {
   const request = axios
-    .post(
-      `https://mernchatapp2.herokuapp.com${USER_SERVER}/login`,
-      dataToSubmit
-    )
+    .post(`${USER_SERVER}/login`, dataToSubmit)
     .then((response) => response.data);
 
   return {
@@ -32,7 +26,7 @@ export function loginUser(dataToSubmit) {
 
 export function auth() {
   const request = axios
-    .get(`https://mernchatapp2.herokuapp.com${USER_SERVER}/auth`)
+    .get(`${USER_SERVER}/auth`)
     .then((response) => response.data);
 
   return {
@@ -43,7 +37,7 @@ export function auth() {
 
 export function logoutUser() {
   const request = axios
-    .get(`https://mernchatapp2.herokuapp.com${USER_SERVER}/logout`)
+    .get(`${USER_SERVER}/logout`)
     .then((response) => response.data);
 
   return {
