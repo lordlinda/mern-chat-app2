@@ -14,7 +14,7 @@ class ChatPage extends Component {
   };
 
   componentDidMount() {
-    let server = `${process.env.REACT_APP_URL}`;
+    let server = `https://mernchatapp2.herokuapp.com/`;
 
     this.props.dispatch(getChats());
 
