@@ -8,7 +8,7 @@ import ChatCard from "./Sections/ChatCard";
 import Dropzone from "react-dropzone";
 import Axios from "axios";
 
-export class ChatPage extends Component {
+class ChatPage extends Component {
   state = {
     chatMessage: "",
   };
@@ -112,10 +112,7 @@ export class ChatPage extends Component {
         </div>
 
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <div
-            className="infinite-container"
-            style={{ height: "500px", overflowY: "scroll" }}
-          >
+          <div className="infinite-container">
             {this.props.chats && this.renderCards()}
             <div
               ref={(el) => {
@@ -175,7 +172,7 @@ export class ChatPage extends Component {
 const mapStateToProps = (state) => {
   return {
     user: state.user,
-    chats: state.chats.chats,
+    chats: state.chat.chats,
   };
 };
 
