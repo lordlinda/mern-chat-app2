@@ -4,7 +4,7 @@ import { CHAT_SERVER } from "../components/Config.js";
 
 export const getChats = () => async (dispatch) => {
   const request = await axios
-    .get(`https://mernchatapp2.herokuapp.com/${CHAT_SERVER}/getChats`)
+    .get(`https://mernchatapp2.herokuapp.com${CHAT_SERVER}/getChats`)
     .then((response) => response.data);
   console.log(request);
   dispatch({
